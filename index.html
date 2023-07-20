@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Name <input id="name" type="text" placeholder="Enter your name" required/></label>
+        <label id="email-label">Email <input id="email" type="email" placeholder="Enter your Email" required/></label>
+        <label id="number-label">Age <span class="spam">(optional)</span> <input id="number" type="number" placeholder="Age" min="5" max="120"/>
+        <label id="cat-label">What breed of cat do you own? <input id="breed" type="text" placeholder="Maine,Siamese,Persian..." /></label>
+      </fieldset>
+     
+      <fieldset>
+        <label id="select-label">What is your pet cat's personality? 
+          <select id="dropdown">
+            <option disabled selected value="">(Select option)</option>
+            <option>Neuroticism</option>
+            <option>Agreeableness</option>
+            <option>Extraversion</option>
+            <option>Dominance</option>
+            <option>Impulsiveness</option>
+          </select>
+        </label>
+         <p>Would you recommend owning a cat to others?</p>
+         <label for="yes"><input id="yes" type="radio" value="Yes" name="choices" class="inline"/>Yes</label>
+         <label for="no"><input id="no" type="radio" value="No" name="choices" class="inline"/>No</label>
+         <label for="maybe"><input id="maybe" type="radio" value="Maybe" name="choices" class="inline"/>Maybe</label>
+      </fieldset>
+      
+      <fieldset>
+        <p>What does your cat likes to do?
+          <span class="spam">(Check all that apply)</span>
+        </p>
+        <label for="eat">
+          <input id="eat" class="inline" name="to-do" type="checkbox"value="Eat"/>Eat
+        </label>
+        <label for="sleep">
+          <input id="sleep" class="inline" name="to-do" type="checkbox" value="Sleep" />Sleep
+        </label>
+        <label for="poop"> 
+          <input id="poop" class="inline" name="to-do" type="checkbox" value="Poop" />Poop
+        </label>
+        <label for="hunt">
+          <input id="hunt" class="inline" name="to-do" type="checkbox" value="Hunt" />Hunt
+        </label>
+        <label for="cuddle">
+          <input id="cuddle" class="inline" name="to-do" type="checkbox" value="Cuddle" />Cuddle
+        </label>
+        <label for="experience">Share your experiences with your cat:
+          <textarea id="experience" name="experience" rows="3" cols="30" placeholder="I like eating cat siopao..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
